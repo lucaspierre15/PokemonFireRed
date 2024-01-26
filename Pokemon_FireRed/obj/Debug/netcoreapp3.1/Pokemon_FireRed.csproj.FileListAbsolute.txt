@@ -1,0 +1,36 @@
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.exe
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.deps.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.runtimeconfig.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.runtimeconfig.dev.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.AssemblyReference.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.Form1.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.genruntimeconfig.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.Properties.Resources.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Área de trabalho^-^\Lucas Trabalhos\PSI\11º4\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.FormGame.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.exe
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.deps.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.runtimeconfig.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.runtimeconfig.dev.json
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\Pokemon_FireRed.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.AssemblyReference.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.Form1.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.FormGame.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.Properties.Resources.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.pdb
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.genruntimeconfig.cache
