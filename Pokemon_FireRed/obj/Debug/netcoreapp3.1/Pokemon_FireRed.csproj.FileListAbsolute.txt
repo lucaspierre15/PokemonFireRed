@@ -34,3 +34,11 @@ C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\
 C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.dll
 C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.pdb
 C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.genruntimeconfig.cache
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.Asio.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.Core.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.Midi.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.Wasapi.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.WinForms.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.WinMM.dll
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.CopyComplete

@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "XmAglK7v9/aoZnEnyEWmiWVTOCcNL8RhV7Fi68Q1htbtVttZzEfhUlec9xBJK/+BM5kp6QehLIMFQxZV7h8pjA==",
+  "dgSpecHash": "cHTIz+9P6/NqVdmav805L3Ao+ZPqSaHi9OVuXDtBt32LUbuJsCQhpSIlu6ciIdoC2KZo0WCd1D/l4PNJ0Erakg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Área de Trabalho\\Jogos\\Pokemon FIreRed\\Pokemon_FireRed\\Pokemon_FireRed\\Pokemon_FireRed.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio.midi\\2.2.1\\naudio.midi.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio.winforms\\2.2.1\\naudio.winforms.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

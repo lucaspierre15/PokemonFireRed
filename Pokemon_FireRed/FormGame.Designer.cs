@@ -29,11 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.timerMovimento = new System.Windows.Forms.Timer(this.components);
+            this.panelMapa = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // panelMapa
+            // 
+            this.panelMapa.Location = new System.Drawing.Point(24, 84);
+            this.panelMapa.Name = "panelMapa";
+            this.panelMapa.Size = new System.Drawing.Size(200, 100);
+            this.panelMapa.TabIndex = 0;
+            // 
+            // FormGame
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelMapa);
+            this.Name = "FormGame";
             this.Text = "FormGame";
+            this.Load += new System.EventHandler(this.FormGame_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timerMovimento;
+        private System.Windows.Forms.Panel panelMapa;
     }
 }
