@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timerMovimento = new System.Windows.Forms.Timer(this.components);
+            this.TimerMap = new System.Windows.Forms.Timer(this.components);
             this.panelMapa = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -46,16 +46,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelMapa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGame";
-            this.Load += new System.EventHandler(this.FormGame_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGame_KeyDown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Timer timerMovimento;
+        private System.Windows.Forms.Timer TimerMap;
         private System.Windows.Forms.Panel panelMapa;
     }
 }
