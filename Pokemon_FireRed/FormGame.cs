@@ -9,9 +9,10 @@ using System.Windows.Forms;
 
 namespace Pokemon_FireRed
 {
-    public partial class FormGame : Form
+     public partial class FormGame : Form
     {
         private string name = "Batman";
+        private bool keyIsPressed;
 
         private Map map;
         private Trainer player;
@@ -103,12 +104,16 @@ namespace Pokemon_FireRed
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
             player.HandleMovement(e.KeyCode);
+            player.HandleKeyDown();
 
             //RedesenharJogo();
 
         }
 
-
+        private void FormGame_KeyUp(object sender, KeyEventArgs e)
+        {
+            player.HandleKeyUp();
+        }
     }
 }
 
