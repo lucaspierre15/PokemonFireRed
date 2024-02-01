@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokemon_FireRed.Entities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -11,10 +12,14 @@ namespace Pokemon_FireRed.Entities.Classes
     {
         public event EventHandler AnimationTick;
 
-        private const int initialInterval = 1;
+        private PictureBox PbPlayer;
+
+        private const int initialInterval = 10;
         private const int pressedInterval = 200;
         private DateTime lastKeyPressTime;
         private bool keyIsPressed;
+
+        private Map map;
 
         private Point targetPosition;
         private double speed = 1;
@@ -25,10 +30,11 @@ namespace Pokemon_FireRed.Entities.Classes
         private Timer timerAnimation;
 
 
-        public Trainer(string name, int x, int y)
+        public Trainer(string name, int x, int y, PictureBox pb)
         {
             Name = name;
             CurrentPosition = new Position(x * Inf.CELLW, y * Inf.CELLH);
+            PbPlayer = pb;
 
             timerAnimation = new Timer();
             timerAnimation.Interval = initialInterval;
@@ -40,7 +46,7 @@ namespace Pokemon_FireRed.Entities.Classes
 
         public void HandleKeyDown()
         {
-            if(!keyIsPressed)
+            if (!keyIsPressed)
             {
                 timerAnimation.Start();
                 keyIsPressed = true;
@@ -82,30 +88,58 @@ namespace Pokemon_FireRed.Entities.Classes
             CurrentPosition.X += (int)(deltaX * ratio);
             CurrentPosition.Y += (int)(deltaY * ratio);
 
+            if (keyIsPressed && (DateTime.Now - lastKeyPressTime).TotalMilliseconds > pressedInterval)
+            {
+                // Aumentar o intervalo do timer após 500 milissegundos
+                timerAnimation.Interval = pressedInterval;
+            }
+            else
+            {
+                // Voltar ao intervalo inicial se a tecla não estiver mais pressionada
+                timerAnimation.Interval = initialInterval;
+            }
+
+
             if (CurrentPosition.X == targetPosition.X && CurrentPosition.Y == targetPosition.Y)
             {
                 // Parar o temporizador quando a posição alvo for alcançada
                 timerAnimation.Stop();
             }
 
-            if (keyIsPressed && (DateTime.Now - lastKeyPressTime).TotalMilliseconds > pressedInterval)
-            {
-                // Aumente o intervalo do timer após 500 milissegundos
-                timerAnimation.Interval = pressedInterval;
-            }
-            else
-            {
-                // Mantenha o intervalo inicial se não tiver passado tempo suficiente
-                timerAnimation.Interval = initialInterval;
-            }
+
 
 
             // Notificar outros assinantes do evento sobre o intervalo de tempo
             AnimationTick?.Invoke(this, EventArgs.Empty);
         }
 
+
         public void HandleMovement(Keys key)
         {
+            /*
+            map = new Map();
+            Point nextCell = DetermineNextCell(key);
+
+            // Verifica se há uma colisão na próxima célula
+            CollisionType collision = map.HaColisao(nextCell.X / Inf.CELLW, nextCell.Y / Inf.CELLH);
+
+            // Agora, você pode tratar a colisão conforme necessário
+            switch (collision)
+            {
+                case CollisionType.WALL:
+                    // Lógica para lidar com colisão de parede (ex: não permitir movimento)
+                    break;
+                case CollisionType.BUSH:
+                    // Lógica para lidar com colisão de matinho
+                    break;
+                case CollisionType.INTERATION:
+                    // Lógica para lidar com colisão de interação
+                    break;
+                case CollisionType.NO_COLLISION:
+                    // Não há colisão, então você pode mover o jogador
+                    MoveTo(nextCell);
+                    break;
+            }*/
             switch (key)
             {
                 case Keys.W:
@@ -122,8 +156,35 @@ namespace Pokemon_FireRed.Entities.Classes
                     break;
             }
         }
+
+        /*private Point DetermineNextCell(Keys key)
+        {
+            int nextX = CurrentPosition.X;
+            int nextY = CurrentPosition.Y;
+            
+            
+            switch (key)
+            {
+                case Keys.W:
+                    MoveTo(new Point(CurrentPosition.X, CurrentPosition.Y -1));
+                    break;
+                case Keys.S:
+                    MoveTo(new Point(CurrentPosition.X, CurrentPosition.Y));
+                    break;
+                case Keys.A:
+                    MoveTo(new Point(CurrentPosition.X - 1, CurrentPosition.Y));
+                    break;
+                case Keys.D:
+                    MoveTo(new Point(CurrentPosition.X + 1, CurrentPosition.Y));
+                    break;
+            }*/
+
+        //return new Point(nextX, nextY);
+
     }
 }
+
+
 
 
 
