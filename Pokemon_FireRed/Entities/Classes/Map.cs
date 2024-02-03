@@ -33,6 +33,7 @@ namespace Pokemon_FireRed.Entities.Classes
 
             // Exemplo: Colisão nas células (1, 1) e (2, 2)
             //Max[48,36]
+            DefinirColisao(17, 17, CollisionType.WALL);
             DefinirColisao(15, 15, CollisionType.DOOR);
             DefinirColisao(14, 15, CollisionType.INTERATION);
             DefinirColisao(12, 15, CollisionType.BUSH);
@@ -45,10 +46,13 @@ namespace Pokemon_FireRed.Entities.Classes
 
         private void DefinirColisao(int x, int y, CollisionType collisionType)
         {
-            // Define uma colisão na célula (x, y)
-            if (x >= 0 && x < Width && y >= 0 && y < Height)
+            if (x >= 0 || x <= Inf.MAPW && y <= Inf.MAPH || y >= 0)
             {
-                CollisionMatrix[x, y] = (int)collisionType;
+                // Define uma colisão na célula (x, y)
+                if (x >= 0 && x < Width && y >= 0 && y < Height)
+                {
+                    CollisionMatrix[x, y] = (int)collisionType;
+                }
             }
         }
 

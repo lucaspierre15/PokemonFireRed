@@ -1,21 +1,20 @@
-﻿using Pokemon_FireRed.Entities.Enums;
+﻿
+using Pokemon_FireRed.Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Pokemon_FireRed.Entities.Classes
 {
     class Trainer
     {
         public event EventHandler AnimationTick;
-
         private PictureBox PbPlayer;
 
         private const int initialInterval = 10;
-        private const int pressedInterval = 200;
+        private const int pressedInterval = 400;
         private DateTime lastKeyPressTime;
         private bool keyIsPressed;
 
@@ -26,9 +25,7 @@ namespace Pokemon_FireRed.Entities.Classes
 
         public string Name { get; protected set; }
         public Position CurrentPosition { get; protected set; }
-
         private Timer timerAnimation;
-
 
         public Trainer(string name, int x, int y, PictureBox pb)
         {
@@ -39,32 +36,28 @@ namespace Pokemon_FireRed.Entities.Classes
             timerAnimation = new Timer();
             timerAnimation.Interval = initialInterval;
             timerAnimation.Tick += TimerAnimation_Tick;
-
             keyIsPressed = false;
             lastKeyPressTime = DateTime.MinValue;
         }
 
         public void HandleKeyDown()
         {
-            if (!keyIsPressed)
-            {
-                timerAnimation.Start();
-                keyIsPressed = true;
-                lastKeyPressTime = DateTime.Now;
-            }
+                if (!keyIsPressed)
+                {
+                    timerAnimation.Start();
+                    keyIsPressed = true;
+                    lastKeyPressTime = DateTime.Now;
+                }
         }
-
         public void HandleKeyUp()
         {
             timerAnimation.Stop();
             keyIsPressed = false;
             lastKeyPressTime = DateTime.MinValue;
         }
-
         public void MoveTo(Point target)
         {
             targetPosition = target;
-
             // Inicie ou reinicie o temporizador para animar o movimento
             timerAnimation.Start();
         }
@@ -76,26 +69,22 @@ namespace Pokemon_FireRed.Entities.Classes
         private void TimerAnimation_Tick(object sender, EventArgs e)
         {
             // Lógica de movimento pixel por pixel
-
             // Lógica de animação do treinador
             int deltaX = targetPosition.X - CurrentPosition.X;
             int deltaY = targetPosition.Y - CurrentPosition.Y;
             double distance = Math.Sqrt(deltaX * deltaX + deltaY * deltaY);
             double movement = Math.Min(speed, distance);
             double ratio = movement / distance;
-
             // Atualizar a posição
             CurrentPosition.X += (int)(deltaX * ratio);
             CurrentPosition.Y += (int)(deltaY * ratio);
 
             if (keyIsPressed && (DateTime.Now - lastKeyPressTime).TotalMilliseconds > pressedInterval)
             {
-                // Aumentar o intervalo do timer após 500 milissegundos
                 timerAnimation.Interval = pressedInterval;
             }
             else
             {
-                // Voltar ao intervalo inicial se a tecla não estiver mais pressionada
                 timerAnimation.Interval = initialInterval;
             }
 
@@ -105,9 +94,6 @@ namespace Pokemon_FireRed.Entities.Classes
                 // Parar o temporizador quando a posição alvo for alcançada
                 timerAnimation.Stop();
             }
-
-
-
 
             // Notificar outros assinantes do evento sobre o intervalo de tempo
             AnimationTick?.Invoke(this, EventArgs.Empty);
@@ -119,10 +105,8 @@ namespace Pokemon_FireRed.Entities.Classes
             /*
             map = new Map();
             Point nextCell = DetermineNextCell(key);
-
             // Verifica se há uma colisão na próxima célula
             CollisionType collision = map.HaColisao(nextCell.X / Inf.CELLW, nextCell.Y / Inf.CELLH);
-
             // Agora, você pode tratar a colisão conforme necessário
             switch (collision)
             {
@@ -183,9 +167,3 @@ namespace Pokemon_FireRed.Entities.Classes
 
     }
 }
-
-
-
-
-
-

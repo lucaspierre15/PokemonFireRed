@@ -19,6 +19,8 @@ namespace Pokemon_FireRed
     {
         private WaveOutEvent waveOutEvent;
         private AudioFileReader audioFileReader;
+
+        PictureBox pbTitleScreen;
         public Form1()
         {
             InitializeComponent();
@@ -32,19 +34,30 @@ namespace Pokemon_FireRed
 
         private void InitializeTitleLoad()
         {
+            //Inicializa o formulario
+            ClientSize = new Size(1386, 788);
+            BackColor = Color.Black;
+            CenterToScreen();
+
+            //Adiciona e modifica a PictureBox
+            pbTitleScreen = new PictureBox();
+            pbTitleScreen.ImageLocation = @"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Images or GIFS\TitleScreen.gif";
+
+            pbTitleScreen.Size = new Size(999, 772);
+            pbTitleScreen.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            int x = (Screen.PrimaryScreen.Bounds.Width - pbTitleScreen.Width) / 2;
+            int y = (Screen.PrimaryScreen.Bounds.Height - pbTitleScreen.Height) / 2;
+
+            pbTitleScreen.Location = new Point(x, y);
+            Controls.Add(pbTitleScreen);
+
+            //Adiciona a música 
             string musicPath = @"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Music\PokémonFireRedTitle Screen.wav";
 
             // Inicie a reprodução da música em uma thread separada
             Task.Run(() => MusicTitleLoad(musicPath));
 
-            ClientSize = new Size(1386, 788);
-            BackColor = Color.Black;
-
-            pbTitleScreen.Size = new Size(999, 772);
-            int x = (Screen.PrimaryScreen.Bounds.Width - pbTitleScreen.Width) / 2;
-            int y = (Screen.PrimaryScreen.Bounds.Height - pbTitleScreen.Height) / 2;
-
-            pbTitleScreen.Location = new System.Drawing.Point(x, y);
         }
 
         private void MusicTitleLoad(string mP)

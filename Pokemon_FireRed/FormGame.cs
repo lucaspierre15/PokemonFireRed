@@ -16,6 +16,9 @@ namespace Pokemon_FireRed
         private Map map;
         private Trainer player;
 
+        PictureBox pbImageMap;
+        PictureBox pbPlayer;
+
         public FormGame()
         {
             InitializeComponent();
@@ -30,16 +33,31 @@ namespace Pokemon_FireRed
             ClientSize = new Size(Inf.SCREENW, Inf.SCREENH);
             BackColor = Color.Black;
 
+            //Images
+            pbImageMap  = new PictureBox();
+            pbPlayer = new PictureBox();
 
             // 49c Largura 37c Altura | 20p, 21p Cada Celula 
             map = new Map();
+
+            pbImageMap.ImageLocation = @"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Images or GIFS\PalletCity01.png";
+            pbImageMap.Size = new Size(Inf.WIDTH, Inf.HEIGHT);
+            pbImageMap.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            int x = (panelMapa.Width - pbImageMap.Width) / 2;
+            int y = (panelMapa.Height - pbImageMap.Height) / 2;
+
+            pbImageMap.Location = new Point(x, y);
+            pbImageMap.Anchor = AnchorStyles.None;
+            panelMapa.Controls.Add(pbImageMap);
+
             player = new Trainer(name, 1, 1, pbPlayer);
-           // SpawnTrainer();
+            pbPlayer.Size= new Size (Inf.CELLW, Inf.CELLH);
+            
+
+            panelMapa.Controls.Add(pbPlayer);
             pbPlayer.BringToFront();
-            // Configura a posição inicial do jogador
-            // Garante que a posição inicial do jogador está dentro dos limites da tela
-            //player.CurrentPosition.X //= Math.Max(0, Math.Min(player.CurrentPosition.X, Inf.WIDTH - pbPlayer.Width));
-            //player.CurrentPosition.Y //= Math.Max(0, Math.Min(player.CurrentPosition.Y, Inf.HEIGHT - pbPlayer.Height));
+
         }
 
         private void TimerDrawMap()
@@ -59,17 +77,13 @@ namespace Pokemon_FireRed
 
         private void DrawMap()
         {
-            // Use um controle Panel para representar o mapa
-            //panelMapa.Size = new Size(mapa.Largura * larguraCadaCelula, mapa.Altura * alturaCadaCelula);
-            //panelMapa.Location = new Point(10, 10); // Ajuste conforme necessário
             panelMapa.Size = new Size(Inf.WIDTH, Inf.HEIGHT);
 
             int pointX = (Screen.PrimaryScreen.Bounds.Width - panelMapa.Width) / 2;
             int pointY = (Screen.PrimaryScreen.Bounds.Height - panelMapa.Height) / 2;
 
-            panelMapa.Location = new System.Drawing.Point(pointX, pointY);
-
-            // Lógica para desenhar e colorir as células do mapa
+            panelMapa.Location = new Point(pointX, pointY);
+            /*
             using Graphics g = panelMapa.CreateGraphics();
             for (int x = 0; x < map.Width; x++)
             {
@@ -104,8 +118,9 @@ namespace Pokemon_FireRed
                         map.WidhtCell, map.HeightCell
                         );
                 }
-            }
+            }*/
         }
+
 
         private void DrawPlayer()
         {
@@ -125,14 +140,6 @@ namespace Pokemon_FireRed
         private void FormGame_KeyUp(object sender, KeyEventArgs e)
         {
             player.HandleKeyUp();
-        }
-
-        private void SpawnTrainer()
-        {
-            int spawnX = Math.Max(0, Math.Min(player.CurrentPosition.X, panelMapa.Width - pbPlayer.Width));
-            int spawnY = Math.Max(0, Math.Min(player.CurrentPosition.Y, panelMapa.Height - pbPlayer.Height));
-
-            pbPlayer.Location = new Point(spawnX, spawnY);
         }
     }
 }
