@@ -11,10 +11,10 @@ namespace Pokemon_FireRed.Entities.Classes
         public const int SCREENW = 1386;
         public const int SCREENH = 788;
 
-        public const int MAPW = 59;
+        public const int MAPW = 49;
         public const int MAPH = 37;
 
-        public const int CELLW = 20;
-        public const int CELLH = 21;
+        public const int CELLW = 20;    //20;
+        public const int CELLH = 21;    //21;
     }
 }

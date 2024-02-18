@@ -4,12 +4,10 @@ using System.Text;
 
 namespace Pokemon_FireRed.Entities.Enums
 {
-    enum CollisionType
+    enum MoveType
     {
-        NO_COLLISION,
-        WALL,
-        DOOR,
-        BUSH,
-        INTERACTION
+        PHYSICAL,
+        SPECIAL
     }
 }
+

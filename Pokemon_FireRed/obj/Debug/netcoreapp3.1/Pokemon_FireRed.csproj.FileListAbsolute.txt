@@ -42,3 +42,5 @@ C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\
 C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.WinForms.dll
 C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\bin\Debug\netcoreapp3.1\NAudio.WinMM.dll
 C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.csproj.CopyComplete
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.Entities.Classes.FormBattle.resources
+C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\Pokemon_FireRed\obj\Debug\netcoreapp3.1\Pokemon_FireRed.FormInventory.resources

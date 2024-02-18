@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Pokemon_FireRed.Entities.Enums
 {
-    enum CollisionType
+    enum AttackEffect
     {
-        NO_COLLISION,
-        WALL,
-        DOOR,
-        BUSH,
-        INTERACTION
+        NONE,
+        SLEEP,
+        BURN,
+        POISON,
+        PARALYZED
     }
 }
