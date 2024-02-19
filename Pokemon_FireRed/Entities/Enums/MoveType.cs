@@ -7,7 +7,8 @@ namespace Pokemon_FireRed.Entities.Enums
     enum MoveType
     {
         PHYSICAL,
-        SPECIAL
+        SPECIAL,
+        STATUS 
     }
 }
 

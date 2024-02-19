@@ -27,7 +27,7 @@ namespace Pokemon_FireRed.Entities.Classes
         public PokemonType Type { get; set; }
         public PokemonType SecondType { get; set; }
 
-        public List<Attack> Attacks { get; set; }
+        public List<Attack> Attacks { get; set; } = new List<Attack>();
 
         public Pokemon(string name, PokemonType type, PokemonType secondType, int minLevelStarter, int maxLevelStater, 
             PokemonSpecies species,string mySprite,string wildSprite,

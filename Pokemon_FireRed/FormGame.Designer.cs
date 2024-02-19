@@ -50,6 +50,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormGame_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormGame_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormGame_KeyUp);
             this.ResumeLayout(false);

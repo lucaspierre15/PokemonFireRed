@@ -34,9 +34,18 @@ namespace Pokemon_FireRed
             ClientSize = new Size(Inf.SCREENW, Inf.SCREENH);
             BackColor = Color.Black;
 
-            pbImageMap  = new PictureBox();
+            pbImageMap = new PictureBox();
             pbPlayer = new PictureBox();
             map = new Map();
+
+
+            panelMapa.Size = new Size(Inf.WIDTH, Inf.HEIGHT);
+
+            int pointX = (Screen.PrimaryScreen.Bounds.Width - panelMapa.Width) / 2;
+            int pointY = (Screen.PrimaryScreen.Bounds.Height - panelMapa.Height) / 2;
+
+            panelMapa.Location = new Point(pointX, pointY);
+
 
             pbImageMap.ImageLocation = @"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Images or GIFS\PalletCity01.png";
             pbImageMap.Size = new Size(Inf.WIDTH, Inf.HEIGHT);
@@ -48,7 +57,7 @@ namespace Pokemon_FireRed
             pbImageMap.Location = new Point(x, y);
             pbImageMap.Anchor = AnchorStyles.None;
 
-            //panelMapa.Controls.Add(pbImageMap);
+            panelMapa.Controls.Add(pbImageMap);
           
         }
 
@@ -56,8 +65,10 @@ namespace Pokemon_FireRed
         {
             player = new Trainer(name, 1, 1, pbPlayer);
             pbPlayer.Size = new Size(Inf.CELLW * 2, Inf.CELLH * 2);
+            pbPlayer.BackColor = Color.Transparent;
             pbPlayer.ImageLocation = @"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Red\GIF PNG\RedDown.gif";
             pbPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
+
 
             panelMapa.Controls.Add(pbPlayer);
             pbPlayer.BringToFront();
@@ -80,55 +91,50 @@ namespace Pokemon_FireRed
         private void TimerMovimento_Tick(object sender, EventArgs e)
         {
             label1.Text = $"{player.CurrentPosition.X}, {player.CurrentPosition.Y}";
-            DrawMap();
+            //DrawMap();
             DrawPlayer();
         }
 
 
-        private void DrawMap()
-        {
-            panelMapa.Size = new Size(Inf.WIDTH, Inf.HEIGHT);
+        //private void DrawMap()  
+        //{
+           
 
-            int pointX = (Screen.PrimaryScreen.Bounds.Width - panelMapa.Width) / 2;
-            int pointY = (Screen.PrimaryScreen.Bounds.Height - panelMapa.Height) / 2;
+        //    using Graphics g = panelMapa.CreateGraphics();
+        //    for (int x = 0; x < map.Width; x++)
+        //    {
+        //        for (int y = 0; y < map.Height; y++)
+        //        {
+        //            Color corCelula;
 
-            panelMapa.Location = new Point(pointX, pointY);
+        //            switch (map.HaColisao(x, y))
+        //            {
+        //                case CollisionType.WALL:
+        //                    corCelula = Color.Red;
+        //                    break;
+        //                case CollisionType.BUSH:
+        //                    corCelula = Color.DarkGreen;
+        //                    break;
+        //                case CollisionType.INTERACTION:
+        //                    corCelula = Color.Yellow;
+        //                    break;
+        //                case CollisionType.DOOR:
+        //                    corCelula = Color.White;
+        //                    break;
+        //                case CollisionType.NO_COLLISION:
+        //                    corCelula = Color.BlueViolet;
+        //                    break;
+        //                default:
+        //                    corCelula = Color.Orange;
+        //                    break;
+        //            }
 
-            using Graphics g = panelMapa.CreateGraphics();
-            for (int x = 0; x < map.Width; x++)
-            {
-                for (int y = 0; y < map.Height; y++)
-                {
-                    Color corCelula;
-
-                    switch (map.HaColisao(x, y))
-                    {
-                        case CollisionType.WALL:
-                            corCelula = Color.Red;
-                            break;
-                        case CollisionType.BUSH:
-                            corCelula = Color.DarkGreen;
-                            break;
-                        case CollisionType.INTERACTION:
-                            corCelula = Color.Yellow;
-                            break;
-                        case CollisionType.DOOR:
-                            corCelula = Color.White;
-                            break;
-                        case CollisionType.NO_COLLISION:
-                            corCelula = Color.BlueViolet;
-                            break;
-                        default:
-                            corCelula = Color.Orange;
-                            break;
-                    }
-
-                    using SolidBrush brush = new SolidBrush(corCelula);
-                    g.FillRectangle(brush, x * map.WidthCell, y * map.HeightCell,
-                        map.WidthCell, map.HeightCell);
-                }
-            }
-        }
+        //            using SolidBrush brush = new SolidBrush(corCelula);
+        //            g.FillRectangle(brush, x * map.WidthCell, y * map.HeightCell,
+        //                map.WidthCell, map.HeightCell);
+        //        }
+        //    }
+        //}
 
 
         private void DrawPlayer()
@@ -150,6 +156,11 @@ namespace Pokemon_FireRed
         private void FormGame_KeyUp(object sender, KeyEventArgs e)
         {
             player.HandleKeyUp();
+        }
+
+        private void FormGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

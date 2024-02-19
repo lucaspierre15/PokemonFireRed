@@ -24,11 +24,12 @@ namespace Pokemon_FireRed
         public Form1()
         {
             InitializeComponent();
+            InitializeTitleLoad();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            InitializeTitleLoad();
+           
             
         }
 
