@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using Pokemon_FireRed.Entities.Classes;
+using System.Text.Json.Serialization;
 
 namespace Pokemon_FireRed
 {
@@ -20,17 +21,46 @@ namespace Pokemon_FireRed
         private WaveOutEvent waveOutEvent;
         private AudioFileReader audioFileReader;
 
-        PictureBox pbTitleScreen;
+        private Panel panelScreen = new Panel();
+        private Panel panelChoose = new Panel();
+
+        private Button btnProxBtn;
+        private Font pokemonFont = new Font(new FontFamily("Pokemon Fire Red"), 28);
+        private PictureBox pbTitleScreen, pbChossePlayer, pbShowPlayer, pbNamePlayer,
+            pbTextBox;
+
         public Form1()
         {
+            
             InitializeComponent();
             InitializeTitleLoad();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
+            btnProxBtn = new Button();
+            btnProxBtn.Size = new Size(50, 15);
+            btnProxBtn.Location = new Point(0, 0);
+            btnProxBtn.BackColor = Color.White; 
+            Controls.Add(btnProxBtn);
+            btnProxBtn.Click += btnProxBtn_Click;
+
+            //TextBox pao = new TextBox();
+            //pao.Size = new Size(60, 20);
+            //pao.Location = new Point(20, 20);
+            //panelScreen.Controls.Add(pao);
+            //pao.BringToFront();
+
+            //Label asd = new Label();
+            //asd.Size = new Size(70, 30);
+            //asd.Location = new Point(30, 30);
+            //asd.Font = pokemonFont;
+            //asd.Text = "Pokémom";
+            //panelScreen.Controls.Add(asd);
+
+        }
+        private void btnProxBtn_Click(object sender, EventArgs e)
         {
-           
-            
+            FormGame formGame = new FormGame();
+            formGame.ShowDialog();
+            this.Close();
         }
 
         private void InitializeTitleLoad()
@@ -53,7 +83,6 @@ namespace Pokemon_FireRed
             pbTitleScreen.Location = new Point(x, y);
             Controls.Add(pbTitleScreen);
 
-            //Adiciona a música 
             string musicPath = @"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Music\PokémonFireRedTitle Screen.wav";
 
             // Inicie a reprodução da música em uma thread separada
@@ -84,7 +113,7 @@ namespace Pokemon_FireRed
 
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -96,29 +125,100 @@ namespace Pokemon_FireRed
                 audioFileReader?.Dispose();
             }
         }
+
+        private void InitializeLoginComponent()
+        {
+            pbTitleScreen.Visible = false;
+            pbTitleScreen.Enabled = false;
+
+            LoadPanelScreen();
+            panelScreen.BackgroundImage = Image.FromFile(@"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Images or GIFS\ScreenPlayer.png");
+            panelScreen.BackgroundImageLayout = ImageLayout.Stretch;
+
+            panelChoose = new Panel
+            {
+                Size = new Size(364, 229),
+                Location = new Point(566, 311),
+                BackgroundImage = Image.FromFile(@"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Images or GIFS\ChooseBoyAndGirl.png"),
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
+            panelScreen.Controls.Add(panelChoose);
+
+            pbTextBox = new PictureBox
+            {
+                Size = new Size(959, 215),
+                Location = new Point(22, 541),
+                BackgroundImage = Image.FromFile(@"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Images or GIFS\TextBoxBar.png"),
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
+            panelScreen.Controls.Add(pbTextBox);
+
+        }
+
+        private void LoadPanelScreen()
+        {
+
+            panelScreen.Size = new Size(Inf.WIDTH, Inf.HEIGHT);
+
+            panelScreen.BackColor = Color.Aquamarine;
+
+            int pointX = (Screen.PrimaryScreen.Bounds.Width - panelScreen.Width) / 2;
+            int pointY = (Screen.PrimaryScreen.Bounds.Height - panelScreen.Height) / 2;
+
+            panelScreen.Location = new Point(pointX, pointY);
+            Controls.Add(panelScreen);
+        }
+
+        //private string LabelPrueba()
+        //{
+        //    string prueba = "";
+        //    prueba = CarregarDados();
+
+        //    MessageBox.Show("Contenido del archivo: " + prueba);
+
+        //    return prueba;
+        //}
+
+        //internal static string CarregarDados()
+        //{
+        //    try
+        //    {
+        //        using FileStream fs = File.Open(@"C:\Users\lucas\OneDrive\Área de Trabalho\Jogos\Pokemon FIreRed\Pokemon_FireRed\ResourcesPK\Usuario.txt", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Delete);
+        //        using StreamReader sr = new StreamReader(fs);
+
+        //        string contenido = sr.ReadToEnd();
+        //        if (string.IsNullOrEmpty(contenido))
+        //            return "";
+
+        //        //Esto es para convertir ese texto en el objeto que quiera deserializar del JSON
+        //        //messagem = JsonConvert.DeserializeObject<List<Utilizador>>(contenido) ?? new Classe();
+
+        //        return contenido;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Erro ao lêr os utilizadores: {ex.Message}");
+        //    }
+
+        //    return "";
+        //}
+
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
-                pbTitleScreen.Enabled = false;
-                pbTitleScreen.Visible = false;
-            FormGame game = new FormGame();
-            game.ShowDialog();
+                InitializeLoginComponent();
         }
 
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
-        {
-            pbTitleScreen.Enabled = false;
-            pbTitleScreen.Visible = false;
-            FormGame game = new FormGame();
-            game.ShowDialog();
-        }
+        private void Form1_MouseClick(object sender, MouseEventArgs e) => InitializeLoginComponent();
 
-        private void pbTitleScreen_Click(object sender, EventArgs e)
+        private void pbTitleScreen_Click(object sender, EventArgs e) => InitializeLoginComponent();
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            pbTitleScreen.Enabled = false;
-            pbTitleScreen.Visible = false;
-            FormGame game = new FormGame();
-            game.ShowDialog();
+            panel1.Visible = false;
+            //string algo = "";
+            //algo = LabelPrueba();
         }
     }
 }
+

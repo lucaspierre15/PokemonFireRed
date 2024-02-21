@@ -57,7 +57,7 @@ namespace Pokemon_FireRed
             pbImageMap.Location = new Point(x, y);
             pbImageMap.Anchor = AnchorStyles.None;
 
-            panelMapa.Controls.Add(pbImageMap);
+           // panelMapa.Controls.Add(pbImageMap);
           
         }
 
@@ -91,50 +91,50 @@ namespace Pokemon_FireRed
         private void TimerMovimento_Tick(object sender, EventArgs e)
         {
             label1.Text = $"{player.CurrentPosition.X}, {player.CurrentPosition.Y}";
-            //DrawMap();
+            DrawMap();
             DrawPlayer();
         }
 
 
-        //private void DrawMap()  
-        //{
-           
+        private void DrawMap()
+        {
 
-        //    using Graphics g = panelMapa.CreateGraphics();
-        //    for (int x = 0; x < map.Width; x++)
-        //    {
-        //        for (int y = 0; y < map.Height; y++)
-        //        {
-        //            Color corCelula;
 
-        //            switch (map.HaColisao(x, y))
-        //            {
-        //                case CollisionType.WALL:
-        //                    corCelula = Color.Red;
-        //                    break;
-        //                case CollisionType.BUSH:
-        //                    corCelula = Color.DarkGreen;
-        //                    break;
-        //                case CollisionType.INTERACTION:
-        //                    corCelula = Color.Yellow;
-        //                    break;
-        //                case CollisionType.DOOR:
-        //                    corCelula = Color.White;
-        //                    break;
-        //                case CollisionType.NO_COLLISION:
-        //                    corCelula = Color.BlueViolet;
-        //                    break;
-        //                default:
-        //                    corCelula = Color.Orange;
-        //                    break;
-        //            }
+            using Graphics g = panelMapa.CreateGraphics();
+            for (int x = 0; x < map.Width; x++)
+            {
+                for (int y = 0; y < map.Height; y++)
+                {
+                    Color corCelula;
 
-        //            using SolidBrush brush = new SolidBrush(corCelula);
-        //            g.FillRectangle(brush, x * map.WidthCell, y * map.HeightCell,
-        //                map.WidthCell, map.HeightCell);
-        //        }
-        //    }
-        //}
+                    switch (map.HaColisao(x, y))
+                    {
+                        case CollisionType.WALL:
+                            corCelula = Color.Red;
+                            break;
+                        case CollisionType.BUSH:
+                            corCelula = Color.DarkGreen;
+                            break;
+                        case CollisionType.INTERACTION:
+                            corCelula = Color.Yellow;
+                            break;
+                        case CollisionType.DOOR:
+                            corCelula = Color.White;
+                            break;
+                        case CollisionType.NO_COLLISION:
+                            corCelula = Color.BlueViolet;
+                            break;
+                        default:
+                            corCelula = Color.Orange;
+                            break;
+                    }
+
+                    using SolidBrush brush = new SolidBrush(corCelula);
+                    g.FillRectangle(brush, x * map.WidthCell, y * map.HeightCell,
+                        map.WidthCell, map.HeightCell);
+                }
+            }
+        }
 
 
         private void DrawPlayer()

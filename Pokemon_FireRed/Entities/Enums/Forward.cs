@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Pokemon_FireRed.Entities.Enums
 {
-    enum Forward
+    enum BattleState
     {
-        UP, 
-        DOWN,
-        LEFT,
-        RIGHT
+        PLAYERTURN, ENEMYTURN
     }
 }

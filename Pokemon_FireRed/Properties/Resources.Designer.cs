@@ -59,15 +59,5 @@ namespace Pokemon_FireRed.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TitleScreen {
-            get {
-                object obj = ResourceManager.GetObject("TitleScreen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

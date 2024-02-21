@@ -8,10 +8,13 @@ namespace Pokemon_FireRed.Entities.Classes
     internal class EffectDetails
     {
         public AttackEffect EffectType { get; set; }
+        public int Accuracy { get; set; } 
 
-        public EffectDetails (AttackEffect effectType)
+        public EffectDetails (AttackEffect effectType, int accuracy)
         {
             EffectType = effectType;
+            Accuracy = accuracy;
         }
+
     }
 }

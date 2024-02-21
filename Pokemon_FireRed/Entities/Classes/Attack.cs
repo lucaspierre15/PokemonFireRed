@@ -13,7 +13,7 @@ namespace Pokemon_FireRed.Entities.Classes
         public int Power { get; set; }
         public int Accuracy { get; set; }
             
-        public Attack(string name, PokemonType type, MoveType mType, int power, int accuracy)
+        public Attack(string name, PokemonType type, MoveType mType, int power, int accuracy, EffectDetails effect)
         {
             Name = name;
             Type = type;
